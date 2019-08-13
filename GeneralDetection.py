@@ -52,7 +52,23 @@ def main():
         cv2.waitKey(0)
 
         print('\n\n')
-        # bringing user back to the main menu
-        import mainPage
+
+        menuChoice = input('Press 1 to detect facial emotion from this picture\n' +
+                           'Press 2 to detect age from this picture\n' +
+                           'Press 3 to return to the program main menu\n' +
+                           'Press 4 to exit\n\n' +
+                           'Please enter your answer here: ')
+
+        if menuChoice == '1':
+            import Emotion
+
+        if menuChoice == '2':
+            import Age
+
+        if menuChoice == '3':
+            import mainPage
+
+        if menuChoice == '4':
+            exit()
 
 main()
