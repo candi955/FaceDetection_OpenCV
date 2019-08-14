@@ -1,15 +1,44 @@
+# Face detection page utilizing OpenCV
+
 import cv2
 
 def main():
 
-    emotions = ["neutral", "anger", "contempt", "disgust", "fear", "happy", "sadness", "surprise"]  # Define emotions
+    while True:
+        try:
+            # Requesting user-input on which picture will have face detection performed on it
+            # https://stackoverflow.com/questions/29824194/setting-user-input-to-variable-name
+            imagePath = input('\n\nPlease enter the name of the image you would like to detect a face from here.\n' +
+                              'Capitalization and spelling of the name will make a difference. Also, the file extension\n' +
+                              'will make a difference, and should be added to the image name.\n\n' +
+                              'Please enter the database picture name for emotion/age detection:\n\n' +
+                              'AllTheKids.jpg\n' +
+                              'CodyTrip.jpg\n' +
+                              'MeAndEllie.jpg\n' +
+                              'MeAndSteph.jpg\n' +
+                              'MeAndStephAgain.jpg\n' +
+                              'NashvilleTrip.jpg\n' +
+                              'child_angry_neutral.JPG\n' +
+                              'child_happy.JPG\n' +
+                              'neutralChildFace.JPG\n' +
+                              'neutral.JPG\n' +
+                              'neutral_glasses.JPG\n' +
+                              'surpriseFace.JPG\n' +
+                              'disgust_neutral.JPG\n' +
+                              'smileFace.JPG\n' +
+                              'sadFace.JPG\n' +
+                              'JaneMansfield_Happy.JPG\n' +
+                              'RitaHayworth_Neutral.JPG\n' +
+                              'ElvisPresley_neutral.JPG\n' +
+                              '\n' +
+                              'Please enter the name of your image here: ')
+        except ValueError:
+            (print("The answer did not compute properly.  Make sure you typed the file extension in correctly.\n" +
+                   "The program will bring you to the beginning to try again.\n"))
+            main()
+        else:
+            break
 
-    # Requesting user-input on which picture will have face detection performed on it
-    # https://stackoverflow.com/questions/29824194/setting-user-input-to-variable-name
-    imagePath = input('\n\nPlease enter the name of the image you would like to detect a face from here.\n' +
-                      'Capitalization and spelling of the name will make a difference. Also, the file extension\n' +
-                      'will make a difference, and should be added to the image name. Thank you.\n\n' +
-                      'Please enter the name of your image here: ')
 
     # creating variable for haar cascade, see reference below for haar files downloaded via zip file,
     # which I extracted to my program files.
@@ -53,22 +82,31 @@ def main():
 
         print('\n\n')
 
-        menuChoice = input('Press 1 to detect facial emotion from this picture\n' +
-                           'Press 2 to detect age from this picture\n' +
+
+        # Offering the user menu choices to continue or exit program
+        menuChoice = input('Press 1 to detect a face or faces in an image again\n' +
+                           'Press 2 to detect facial emotion and age from a picture\n' +
                            'Press 3 to return to the program main menu\n' +
                            'Press 4 to exit\n\n' +
                            'Please enter your answer here: ')
 
-        if menuChoice == '1':
-            import Emotion
+        while True:
+            try:
+                if menuChoice == '1':
+                    main()
 
-        if menuChoice == '2':
-            import Age
+                if menuChoice == '2':
+                    import EmotionAndAge
 
-        if menuChoice == '3':
-            import mainPage
+                if menuChoice == '3':
+                    import mainPage
 
-        if menuChoice == '4':
-            exit()
+                if menuChoice == '4':
+                    exit()
 
+            except ValueError:
+                print("Let's try again. The program will bring you to the beginning of the menu.")
+                main()
+            else:
+                break
 main()
