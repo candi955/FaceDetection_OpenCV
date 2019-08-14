@@ -1,0 +1,34 @@
+This is a student project I did for the University of Advancing Technology Advanced Programming Concepts course. Feel
+free to use or modify it as you wish.  However, please make sure you include this readMe page and the code with
+all references.  Pictures that aren't my own personal pictures were pulled off of the openSource Yale haar datasets,
+or Creative Commons.  I will include those references below. All code references are written with hashes in the
+actual code.
+
+The mainPage is a main menu that offers to take the user to the FaceDetection.py page to detect faces from images.
+Otherwise, choices can lead the user to the EmotionAndAge page to detect emotion and age from images.  I mostly used
+OpenCV and Algorithmia to do these tasks.
+
+Picture resources utilized during the making of this project (other than personal photos):
+
+Rita Hayworth picture:
+https://ccsearch.creativecommons.org/photos/c4c2f521-e649-4b45-b816-fafa9fb4b57f
+
+Audrey Hepburn picture:
+https://ccsearch.creativecommons.org/photos/455135d9-7a4e-41c4-8861-32c2e4537661
+
+Elvis Presley picture:
+https://ccsearch.creativecommons.org/photos/9130f94b-0fbe-42b6-b8f4-59513eec1c80
+
+Jayne Mansfield picture:
+https://ccsearch.creativecommons.org/photos/40558882-c9fa-4f1b-ac64-a564273030e3
+
+child pictures
+https://ccsearch.creativecommons.org/photos/f8202b6e-247a-4ff2-80e4-f01e4216d1f9
+https://ccsearch.creativecommons.org/photos/58daf51b-d7a6-452c-adc4-d20870730feb
+https://ccsearch.creativecommons.org/search?q=child&provider&li&lt&searchBy
+https://ccsearch.creativecommons.org/photos/2976e5d5-4d0c-41a9-91da-73dcbed97645
+https://ccsearch.creativecommons.org/photos/71470e0c-adbb-4ae0-b4e5-38d4d1916235
+https://ccsearch.creativecommons.org/photos/4f1a48e8-c9f1-4d35-a178-6e242c6f8150
+
+Yale Face Dataset:
+https://vismod.media.mit.edu/vismod/classes/mas622-00/datasets/
